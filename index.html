@@ -190,20 +190,26 @@ const POLL_MS = 2500;
 
 /* ── Questions ─────────────────────────────────────── */
 const QUESTIONS = [
-  {q:"Which planet is the largest in our solar system?",
-   opts:["Mars","Saturn","Jupiter","Neptune"],ans:2,cat:"Science"},
-  {q:"What company created Claude, the AI assistant?",
-   opts:["Google","OpenAI","Anthropic","Meta"],ans:2,cat:"Technology"},
-  {q:"How many seconds are in one hour?",
-   opts:["360","3,600","36,000","360,000"],ans:1,cat:"Math"},
-  {q:"In what year did humans first land on the Moon?",
-   opts:["1965","1967","1969","1972"],ans:2,cat:"History"},
-  {q:"How many days did it take ChatGPT to reach 1 million users after launch?",
-   opts:["5 days","30 days","60 days","90 days"],ans:0,cat:"Technology"},
-  {q:"In what year was ChatGPT first released to the public?",
-   opts:["2020","2021","2022","2023"],ans:2,cat:"Technology"},
-  {q:"Approximately what percentage of Earth's surface is covered by water?",
-   opts:["51%","61%","71%","81%"],ans:2,cat:"Geography"},
+  {q:"Which artist has won the most Grammy Awards in history?",
+   opts:["Michael Jackson","Beyoncé","Taylor Swift","Georg Solti"],ans:1,cat:"Music"},
+  {q:"Which movie franchise has grossed the most money worldwide?",
+   opts:["Star Wars","Harry Potter","Marvel Cinematic Universe","James Bond"],ans:2,cat:"Movies"},
+  {q:"How many players are on a standard soccer (football) team on the field?",
+   opts:["9","10","11","12"],ans:2,cat:"Sports"},
+  {q:"Which band performed the best-selling album of all time — 'Thriller'?",
+   opts:["The Beatles","Michael Jackson","Fleetwood Mac","Eagles"],ans:1,cat:"Music"},
+  {q:"In which country did the 2022 FIFA World Cup take place?",
+   opts:["Russia","Brazil","Qatar","UAE"],ans:2,cat:"Sports"},
+  {q:"Which TV show features the fictional paper company Dunder Mifflin?",
+   opts:["Parks and Recreation","Brooklyn Nine-Nine","The Office","Succession"],ans:2,cat:"TV"},
+  {q:"Who directed the 'Jurassic Park' and 'Schindler's List' films?",
+   opts:["James Cameron","Christopher Nolan","Steven Spielberg","Martin Scorsese"],ans:2,cat:"Movies"},
+  {q:"Which artist released the album 'Renaissance' in 2022?",
+   opts:["Rihanna","Adele","Beyoncé","Lizzo"],ans:2,cat:"Music"},
+  {q:"How many rings does an Olympic flag have?",
+   opts:["4","5","6","7"],ans:1,cat:"Sports"},
+  {q:"Which streaming platform produced the hit show 'Stranger Things'?",
+   opts:["HBO","Disney+","Amazon Prime","Netflix"],ans:3,cat:"TV"},
 ];
 
 const BOTS=[
@@ -215,7 +221,8 @@ const BOTS=[
 ];
 
 const CCAT={Science:"#00FF87",Math:"#00E5FF",History:"#FFB800",
-            Geography:"#A78BFA",Language:"#FF80AB","Food & Drink":"#FFD166"};
+            Geography:"#A78BFA",Language:"#FF80AB","Food & Drink":"#FFD166",
+            Music:"#FF80AB",Movies:"#FFD700",Sports:"#00FF87",TV:"#00E5FF",Technology:"#A78BFA"};
 const MED=['🥇','🥈','🥉'];
 const LET=['A','B','C','D'];
 
@@ -558,7 +565,7 @@ function renderWelcome(){
     <div style="font-size:3rem;text-align:center;margin-bottom:6px">🐝</div>
     <div class="logo lg"><span class="lh">HIVE</span><span class="lt">TRIVIA</span></div>
     <div style="text-align:center;color:var(--muted);font-size:.88rem;margin:6px 0 26px">
-      7 questions · 25 seconds each · global audience</div>
+      10 questions · 25 seconds each · global audience</div>
     <button class="btn bd" onclick="startDemoMode()">🤖 Launch Demo Mode</button>
     <div class="hint">Fully local — works from anywhere, no internet required</div>
     <div class="divider">── or set up a real multiplayer game ──</div>
